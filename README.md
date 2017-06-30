@@ -2,7 +2,7 @@
 开发日记
 
 
-* [2017年06月30日-晴转阵雨](https://github.com/binbinguo/Logs/blob/master/README.md#log_20170630)
+* [2017年06月30日-晴转阵雨](https://github.com/binbinguo/Logs/blob/master/README.md#2017年06月30日)
 
 
 ## 2017年06月30日
@@ -10,7 +10,7 @@
 <span id="#log_20170630"></span>
 
 加入[360]()上海团队后, 前期负责一些广告位模块开发, 要求兼容到IE6. 这对之前并不太注重IE低版本兼容性的我带
-来了不小考验, 遂决定将IE低版本兼容性方面的知识再看看，记录一些容易才坑或容易被网络误导方面的内容。
+来了不小考验, 遂决定将IE低版本兼容性方面的知识再看看，记录一些容易踩坑或容易被网络误导方面的内容。
 + IE盒子模型与W3C标准盒子模型的区别
 
 IE盒子模型和W3C标准盒子模型到底有什么区别？ 网上搜索答案时很多关于这方面的介绍,很全面，如[标准W3C盒子模型和IE盒子模型CSS布局经典盒子模型(转)
@@ -26,4 +26,9 @@ IE盒子模型和W3C标准盒子模型到底有什么区别？ 网上搜索答�
 width+margin、height+margin,而标准的盒模型width、height只是content的width、height，不包含padding及margin，对应盒子整体的宽度和高度则需要把padding和margin都加上
 
 **如何避免？**
-* 在html头部加上<!DOCTYPE html>标记，使用标准盒模型，即使是在IE6下依然生效，参照[注意ie6的盒模型](http://www.cnblogs.com/myit/p/4121302.html)
+* 在html头部加上标记:
+```
+<!DOCTYPE html>
+
+````
+使用标准盒模型，即使是在IE6下依然生效，参照[注意ie6的盒模型](http://www.cnblogs.com/myit/p/4121302.html)
