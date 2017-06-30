@@ -11,7 +11,7 @@
 
 加入[360]()上海团队后, 前期负责一些广告位模块开发, 要求兼容到IE6. 这对之前并不太注重IE低版本兼容性的我带
 来了不小考验, 遂决定将IE低版本兼容性方面的知识再看看，记录一些容易踩坑或容易被网络误导方面的内容。
-+ IE盒子模型与W3C标准盒子模型的区别
+##### No1. IE盒子模型与W3C标准盒子模型的区别
 
 IE盒子模型和W3C标准盒子模型到底有什么区别？ 网上搜索答案时很多关于这方面的介绍,很全面，如[标准W3C盒子模型和IE盒子模型CSS布局经典盒子模型(转)
 ](http://www.cnblogs.com/cchyao/archive/2010/07/12/1775846.html)。
@@ -32,3 +32,21 @@ width+margin、height+margin,而标准的盒模型width、height只是content的
 
 ````
 使用标准盒模型，即使是在IE6下依然生效，参照[注意ie6的盒模型](http://www.cnblogs.com/myit/p/4121302.html)
+
+##### No2. ie6不支持CSS :hover 伪类选择器
+
+在**IE6-** 版本对CSS hover 伪类选择器支持的不好，亲测在IE6下给DOM附加的hover样式并不生效，网搜主要解决方法分为两种：
+
+- 引入csshover.htc文件
+- 使用js+添加hover类
+
+我对两种都进行了尝试， 第一种效果最好，不过需要提前下载[csshover.htc](http://download.csdn.net/download/crazy_aka/4184929)，具体的使用方式如下：
+```html
+<!--[if IE 6]>
+    <style>
+        body {behavior: url("../csshover.htc");}
+    </style>
+<![endif]-->
+```
+很简单吧，第二种是结合js实现，大致原理是给所有DOM添加onmouseover和onmouseout事件，动态添加hover类，css中通过#target.hover的形式代替
+#target:hover
