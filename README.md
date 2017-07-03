@@ -3,6 +3,7 @@
 
 
 * [2017年06月30日-晴转阵雨](https://github.com/binbinguo/Logs/blob/master/README.md#2017年06月30日)
+* [2017年07月03日-晴](https://github.com/binbinguo/Logs/blob/master/README.md#2017年07月03日)
 
 
 ## 2017年06月30日
@@ -26,8 +27,9 @@ IE盒子模型和W3C标准盒子模型到底有什么区别？ 网上搜索答�
 width+margin、height+margin,而标准的盒模型width、height只是content的width、height，不包含padding及margin，对应盒子整体的宽度和高度则需要把padding和margin都加上
 
 **如何避免？**
+
 * 在html头部加上标记:
-```
+````html
 <!DOCTYPE html>
 
 ````
@@ -67,3 +69,21 @@ target:hover
 <![endif]--> 
 ````
 
+## 2017年07月03日
+今天尝试了新的编辑器sublime，之前也是在网上看见很多同猿类推荐使用这款轻量级附文本编辑器，自己也想体验一下，初识感觉还可以，第一感觉资源相对于Intellij这种编辑器来说减少了很多，很轻便。但是随之而来的是我如果要使用，它能提供像Intellij idea那样丰富的功能么？ 答案是它丰富的插件系统基本能解决我大部分诉求。
+
+但是
+
+- 在markdown文件方面却有些不足之处
+
+ 有些markdown插件对markdown语法支持的并不好，比如:
+
+````html
+<!DOCTYPE html>
+
+````
+在markdownonlinepreview插件上始终无法正确显示html块，后来又装了些其他的插件，感觉都不理想，直到遇到它：
+
+- OmniMarkupPreviewer
+
+虽然也遇到了写波折，比如浏览[出现404](http://blog.csdn.net/dream_allday/article/details/52951976)，按照大牛的指导果然有效！
