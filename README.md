@@ -49,4 +49,21 @@ width+margin、height+margin,而标准的盒模型width、height只是content的
 <![endif]-->
 ```
 很简单吧，第二种是结合js实现，大致原理是给所有DOM添加onmouseover和onmouseout事件，动态添加hover类，css中通过#target.hover的形式代替
-#target:hover
+target:hover
+
+##### No3. ie6不支持png图片透明
+
+在IE6版本中，png图片不再透明，变成了黑底图片，可采用的[解决办法]():
+
+- 下载[DDPngMin.js](http://www.bvbcode.com/cn/e37g9oak-975765)文件
+- 需要修改的png图片类名或者ID名
+
+具体解决如下：
+
+````html
+<!--[if IE 6]>
+    <script src=""js/DDPngMin.js""></script>
+    <script>DD_belatedPNG.fix('.ad_img img,#banner_ctr ul');</script>
+<![endif]--> 
+````
+
