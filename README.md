@@ -4,6 +4,7 @@
 
 * [2017年06月30日-晴转阵雨](https://github.com/binbinguo/Logs/blob/master/README.md#2017年06月30日)
 * [2017年07月03日-晴](https://github.com/binbinguo/Logs/blob/master/README.md#2017年07月03日)
+* [2017年07月04日-晴](https://github.com/binbinguo/Logs/blob/master/README.md#2017年07月04日)
 
 
 ## 2017年06月30日
@@ -87,3 +88,21 @@ target:hover
 - OmniMarkupPreviewer
 
 虽然也遇到了写波折，比如浏览[出现404](http://blog.csdn.net/dream_allday/article/details/52951976)，按照大牛的指导果然有效！
+
+## 2017年07月04日
+
+在调试IE低版本（IE6、IE7）时发现div的**overflow:hidden**属性并不生效
+
+- 解决办法为：
+````css
+    div {
+        ……
+        *position:relative;
+        ……
+    }
+````
+即[将div的position属性设置成相对定位](http://www.111cn.net/cssdiv/163/42133.htm), 并加上IE hack。
+### 进一步深究
+- 产生原因--bug
+
+低版本IE（IE6/7)中，当父元素的直接子元素或者下级子元素的样式拥有position:relative属性时，父元素的overflow:hidden属性就会失效。
